@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a final-year engineering student passionate about software engineering, AI, and data science." />
+  <meta name="keywords" content="software engineer, AI, machine learning, data science, web development, portfolio" />
+  <meta name="author" content="Ponkumar P" />
+  <meta property="og:title" content="Ponkumar P | Software Engineer Portfolio" />
+  <meta property="og:description" content="Final-Year AI & Data Science Student | Aspiring Software Engineer" />
+  <meta property="og:type" content="website" />
+  <title>Ponkumar_P | Software Engineer Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/PONKUMAR_Photograph.png" />
+  <link rel="apple-touch-icon" href="assets/PONKUMAR_Photograph.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body class="dark-mode" id="body">
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="cursor-trail-container" aria-hidden="true"></div>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader" role="status" aria-label="Loading portfolio">
+    <div class="loader-content">
+      <div class="loader-logo">&lt;Ponkumar_P/&gt;</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initializing Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Particle Background -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Go to top">&lt;Ponkumar_P/&gt;</a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <!-- <li><a href="#achievements" class="nav-link">Awards</a></li> -->
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero section" aria-label="Hero introduction">
+      <div class="hero-container">
+        <div class="hero-content" data-aos="fade-right">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for Opportunities
+          </div>
+          <h1 class="hero-title">Hi, I'm <span class="gradient-text">Ponkumar P</span></h1>
+          <div class="hero-typewriter" aria-live="polite">
+            <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+          </div>
+          <p class="hero-description">
+            Final-year Artificial Intelligence and Data Science student with a passion for building scalable software,
+            exploring AI/ML frontiers, and solving complex problems through elegant code.
+            I thrive at the intersection of technology and innovation.
+          </p>
+          <div class="hero-cta">
+            <a href="assets/Ponkumar_P_Software_Engineer_Resume.pdf" download class="btn btn-primary" aria-label="Download Resume">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline" aria-label="Contact me">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+          <div class="hero-socials" aria-label="Social media links">
+            <a href="https://www.linkedin.com/in/ponkumarp2302/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:ponkumarp143@gmail.com" class="social-link" aria-label="Send email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="#projects" class="social-link" aria-label="View portfolio">
+              <i class="fas fa-briefcase"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" data-aos="fade-left">
+          <div class="hero-avatar-wrapper">
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-ring ring-3"></div>
+            <div class="hero-avatar">
+              <img src="assets/PONKUMAR_Photograph.png" alt="Ponkumar P - Profile Photo" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="avatar-placeholder" style="display:none;" aria-label="Profile photo placeholder">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <div class="hero-badge-float top-right">
+              <i class="fas fa-brain"></i>
+              <span>AI Enthusiast</span>
+            </div>
+            <div class="hero-badge-float bottom-left">
+              <i class="fas fa-layer-group"></i>
+              <span>Full Stack Dev</span>
+            </div>
+          </div>
+          <div class="hero-code-snippet" aria-hidden="true">
+            <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">Name</span>: <span class="code-string">"Ponkumar P"</span>,
+  <span class="code-prop">Role</span>: <span class="code-string">"Software Engineer"</span>,
+  <span class="code-prop">Passion</span>: [<span class="code-string">"AI"</span>, <span class="code-string">"Web Development"</span>, <span class="code-string">"Problem Solving"</span>],
+  <span class="code-prop">Status</span>: <span class="code-string">"Open to Work 🚀"</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about section" aria-label="About me">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Get To Know Me</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">A passionate engineer with a love for building impactful solutions</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-image-col" data-aos="fade-right">
+            <div class="about-img-wrapper">
+              <img src="assets/PONKUMAR_white.png" alt="Ponkumar P" class="about-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="about-img-placeholder" style="display:none;" aria-hidden="true"><i class="fas fa-user-circle"></i></div>
+              <div class="about-exp-badge">
+                <span class="exp-number">New</span>
+                <span class="exp-text">Graduate</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-content-col" data-aos="fade-left">
+            <h3 class="about-greeting">Hello! I'm <span class="gradient-text">Ponkumar P</span></h3>
+            <p class="about-bio">
+              I'm a final-year <strong>Artificial Intelligence and Data Science</strong> student at PSRR College of Engineering
+              with a CGPA of 8.5. I'm deeply passionate about creating technology that makes a
+              difference — whether it's building intelligent AI systems, crafting seamless web
+              experiences, or architecting scalable cloud solutions.
+            </p>
+            <p class="about-bio">
+              My journey in tech started with curiosity about how things work. Today, I channel
+              that curiosity into projects that combine <strong>software engineering</strong>
+              principles with <strong>machine learning</strong> innovation. I'm actively seeking
+              opportunities where I can contribute meaningfully and continue growing.
+            </p>
+            <div class="about-interests">
+              <h4>Areas of Interest</h4>
+              <div class="interest-tags">
+                <span class="interest-tag"><i class="fas fa-code"></i> Software Development</span>
+                <span class="interest-tag"><i class="fas fa-brain"></i> Artificial Intelligence</span>
+                <span class="interest-tag"><i class="fas fa-robot"></i> Machine Learning</span>
+                <span class="interest-tag"><i class="fas fa-globe"></i> Web Development</span>
+                <span class="interest-tag"><i class="fas fa-cloud"></i> Cloud Computing</span>
+              </div>
+            </div>
+            <a href="assets/Ponkumar_P_Software_Engineer_Resume.pdf" download class="btn btn-primary">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+        <!-- <div class="about-stats" data-aos="fade-up">
+          <div class="stat-card">
+            <span class="stat-number" data-target="25">0</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="12">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="8">0</span>
+            <span class="stat-label">Hackathons</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="500">0</span>
+            <span class="stat-label">Problems Solved</span>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="skills section" aria-label="Technical skills">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">What I Know</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">Technologies and tools I work with regularly</p>
+        </div>
+        <div class="skills-categories" data-aos="fade-up">
+          <button class="skill-filter active" data-filter="all">All</button>
+          <button class="skill-filter" data-filter="languages">Languages</button>
+          <button class="skill-filter" data-filter="web">Web</button>
+          <button class="skill-filter" data-filter="database">Databases</button>
+          <button class="skill-filter" data-filter="tools">Tools</button>
+          <button class="skill-filter" data-filter="ai">AI/ML</button>
+        </div>
+        <div class="skills-grid" id="skillsGrid">
+          <div class="skill-card" data-category="languages" data-aos="fade-up">
+            <div class="skill-icon python"><i class="fab fa-python"></i></div>
+            <h4 class="skill-name">Python</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="92"></div></div>
+            <span class="skill-percent">92%</span>
+          </div>
+          <div class="skill-card" data-category="languages" data-aos="fade-up">
+            <div class="skill-icon java"><i class="fab fa-java"></i></div>
+            <h4 class="skill-name">Java</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <!-- <div class="skill-card" data-category="languages" data-aos="fade-up">
+            <div class="skill-icon cpp"><i class="fas fa-code"></i></div>
+            <h4 class="skill-name">C++</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="78"></div></div>
+            <span class="skill-percent">78%</span>
+          </div> -->
+          <div class="skill-card" data-category="languages" data-aos="fade-up">
+            <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
+            <h4 class="skill-name">JavaScript</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="60"></div></div>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-card" data-category="web" data-aos="fade-up">
+            <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+            <h4 class="skill-name">HTML5</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+            <span class="skill-percent">95%</span>
+          </div>
+          <div class="skill-card" data-category="web" data-aos="fade-up">
+            <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+            <h4 class="skill-name">CSS3</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-card" data-category="web" data-aos="fade-up">
+            <div class="skill-icon react"><i class="fab fa-react"></i></div>
+            <h4 class="skill-name">React</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
+            <span class="skill-percent">70%</span>
+          </div>
+          <!-- <div class="skill-card" data-category="web" data-aos="fade-up">
+            <div class="skill-icon node"><i class="fab fa-node-js"></i></div>
+            <h4 class="skill-name">Node.js</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+            <span class="skill-percent">75%</span>
+          </div> -->
+          <div class="skill-card" data-category="database" data-aos="fade-up">
+            <div class="skill-icon mysql"><i class="fas fa-database"></i></div>
+            <h4 class="skill-name">MySQL</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-card" data-category="database" data-aos="fade-up">
+            <div class="skill-icon postgresql"><i class="fas fa-server"></i></div>
+            <h4 class="skill-name">PostgreSQL</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+            <span class="skill-percent">75%</span>
+          </div>
+          <!-- <div class="skill-card" data-category="database" data-aos="fade-up">
+            <div class="skill-icon mongo"><i class="fas fa-leaf"></i></div>
+            <h4 class="skill-name">MongoDB</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="72"></div></div>
+            <span class="skill-percent">72%</span>
+          </div> -->
+          <div class="skill-card" data-category="tools" data-aos="fade-up">
+            <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+            <h4 class="skill-name">Git</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+            <span class="skill-percent">88%</span>
+          </div>
+          <div class="skill-card" data-category="tools" data-aos="fade-up">
+            <div class="skill-icon github-tool"><i class="fab fa-github"></i></div>
+            <h4 class="skill-name">GitHub</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+            <span class="skill-percent">88%</span>
+          </div>
+          <!-- <div class="skill-card" data-category="tools" data-aos="fade-up">
+            <div class="skill-icon docker"><i class="fab fa-docker"></i></div>
+            <h4 class="skill-name">Docker</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="65"></div></div>
+            <span class="skill-percent">65%</span>
+          </div> -->
+          <div class="skill-card" data-category="tools" data-aos="fade-up">
+            <div class="skill-icon vscode"><i class="fas fa-terminal"></i></div>
+            <h4 class="skill-name">VS Code</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+            <span class="skill-percent">95%</span>
+          </div>
+          <div class="skill-card" data-category="ai" data-aos="fade-up">
+            <div class="skill-icon tf"><i class="fas fa-brain"></i></div>
+            <h4 class="skill-name">TensorFlow</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="78"></div></div>
+            <span class="skill-percent">78%</span>
+          </div>
+          <div class="skill-card" data-category="ai" data-aos="fade-up">
+            <div class="skill-icon sklearn"><i class="fas fa-chart-line"></i></div>
+            <h4 class="skill-name">Scikit-Learn</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+            <span class="skill-percent">82%</span>
+          </div>
+          <div class="skill-card" data-category="ai" data-aos="fade-up">
+            <div class="skill-icon pandas"><i class="fas fa-table"></i></div>
+            <h4 class="skill-name">Pandas</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-card" data-category="ai" data-aos="fade-up">
+            <div class="skill-icon numpy"><i class="fas fa-calculator"></i></div>
+            <h4 class="skill-name">NumPy</h4>
+            <div class="skill-bar"><div class="skill-progress" data-width="87"></div></div>
+            <span class="skill-percent">87%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="projects section" aria-label="Featured projects">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">My Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">A selection of projects that showcase my skills and creativity</p>
+        </div>
+        <!-- <div class="project-filters" data-aos="fade-up" role="group" aria-label="Filter projects">
+          <button class="proj-filter active" data-tech="all">All</button>
+          <button class="proj-filter" data-tech="ai">AI/ML</button>
+          <button class="proj-filter" data-tech="web">Web</button>
+          <button class="proj-filter" data-tech="fullstack">Full Stack</button>
+          <button class="proj-filter" data-tech="python">Python</button>
+        </div> -->
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card" data-tech="ai python" data-aos="fade-up">
+            <div class="project-img">
+              <div class="project-img-placeholder ai-bg"><i class="fas fa-robot"></i></div>
+              <div class="project-overlay">
+                <a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="GitHub repo"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-badge ai">AI/ML</span></div>
+              <h3 class="project-title">AI Resume Analyzer & ATS Score Checker</h3>
+              <p class="project-desc">Built an AI-powered Resume Analyzer that evaluates ATS compatibility, extracts skills, predicts job roles, and provides personalized resume improvement suggestions using NLP. Developed as a full-stack application with React, TypeScript, FastAPI, PostgreSQL, JWT authentication, and Docker.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Python</span><span class="tech-tag">SQLAlchemy</span><span class="tech-tag">scikit-learn</span><span class="tech-tag">React</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tech="web fullstack" data-aos="fade-up">
+            <div class="project-img">
+              <div class="project-img-placeholder web-bg"><i class="fas fa-shopping-cart"></i></div>
+              <div class="project-overlay">
+                <a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="GitHub repo"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-badge web">Full Stack</span></div>
+              <h3 class="project-title">E-Commerce Platform</h3>
+              <p class="project-desc">A full-stack e-commerce web app with product listing, cart management, user authentication, and a basic admin panel. Built as a learning project to understand end-to-end web development.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MySQL</span><span class="tech-tag">JWT</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tech="web" data-aos="fade-up">
+            <div class="project-img">
+              <div class="project-img-placeholder indigo-bg"><i class="fas fa-user-tie"></i></div>
+              <div class="project-overlay">
+                <a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="GitHub repo"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-badge web">Web</span></div>
+              <h3 class="project-title">Portfolio Website</h3>
+              <p class="project-desc">Designed and built this fully responsive personal portfolio from scratch — featuring dark/light mode, animated particle background, custom cursor with magnetic effects, smooth scroll animations, typewriter effect, skill bars, project filters, and a WhatsApp-integrated contact form. Zero frameworks used.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- <article class="project-card" data-tech="fullstack web" data-aos="fade-up">
+            <div class="project-img">
+              <div class="project-img-placeholder purple-bg"><i class="fas fa-graduation-cap"></i></div>
+              <div class="project-overlay">
+                <a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="GitHub repo"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-badge web">Full Stack</span></div>
+              <h3 class="project-title">Student Management System</h3>
+              <p class="project-desc">A web-based portal for managing student records, attendance, and grades with role-based access for students and faculty. Developed as an academic project using React and MySQL.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span><span class="tech-tag">Express</span><span class="tech-tag">MySQL</span><span class="tech-tag">JWT</span>
+              </div>
+            </div>
+          </article> -->
+
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INTERNSHIP SECTION ===== -->
+    <section id="experience" class="experience section" aria-label="Work experience">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">My Journey</span>
+          <h2 class="section-title">Work <span class="gradient-text">Internship</span></h2>
+          <p class="section-subtitle">Roles and responsibilities that shaped my career</p>
+        </div>
+        <div class="timeline" role="list">
+          <div class="timeline-item" data-aos="fade-right" role="listitem">
+            <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Artificial Intelligence Intern</h3>
+                  <p class="timeline-org"><i class="fas fa-building"></i> Novi Pvt. Ltd.</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date"><i class="far fa-calendar"></i> Jul 2024 – Aug 2024</span>
+                  <span class="timeline-type internship">Internship</span>
+                </div>
+              </div>
+              <ul class="timeline-contributions">
+                <li>Built and optimized machine learning models to achieve accurate and efficient predictions</li>
+                <li>Processed and analyzed complex datasets to extract actionable insights</li>
+                <li>Developed AI-powered solutions using Python, Scikit-learn, and TensorFlow</li>
+                <li>Improved model performance through feature engineering and hyperparameter tuning</li>
+              </ul>
+              <div class="timeline-tech">
+                <span class="tech-tag">Python</span><span class="tech-tag">Machine Learning</span><span class="tech-tag">NLP</span><span class="tech-tag">Deep Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item right" data-aos="fade-left" role="listitem">
+            <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Fullstack Development</h3>
+                  <p class="timeline-org"><i class="fas fa-globe"></i> Novi Pvt. Ltd.</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date"><i class="far fa-calendar"></i> Jun 2025 – Jul 2025 </span>
+                  <span class="timeline-type internship">Internship</span>
+                </div>
+              </div>
+              <ul class="timeline-contributions">
+                <li>Developed 8+ full-stack web applications using modern frontend and backend technologies</li>
+                <li>Designed and implemented responsive user interfaces with secure RESTful API integration</li>
+                <li>Built scalable backend systems, databases, and authentication workflows for business applications</li>
+                <li>Deployed and maintained full-stack applications with performance optimization and bug fixes</li>
+              </ul>
+              <div class="timeline-tech">
+                <span class="tech-tag">html</span><span class="tech-tag">css</span><span class="tech-tag">vscode</span><span class="tech-tag">WordPress</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right" role="listitem">
+            <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Data Analytics</h3>
+                  <p class="timeline-org"><i class="fas fa-globe"></i> Novi Pvt. Ltd.</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date"><i class="far fa-calendar"></i> Jun 2025 – Jul 2025</span>
+                  <span class="timeline-type internship">Internship</span>
+                </div>
+              </div>
+              <ul class="timeline-contributions">
+                <li>Cleaned and organized datasets using Excel, SQL, and Python for analysis</li>
+                <li>Performed exploratory data analysis (EDA) to identify trends and patterns</li>
+                <li>Created data visualizations and dashboards using Power BI/Tableau</li>
+                <li>Prepared reports and presented data-driven insights to project mentors</li>
+              </ul>
+              <div class="timeline-tech">
+                <span class="tech-tag">Python</span><span class="tech-tag">MS Excel</span><span class="tech-tag">Tableau</span><span class="tech-tag">Power BI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="timeline-item right" data-aos="fade-left" role="listitem">
+            <div class="timeline-dot"><i class="fas fa-users-cog"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Technical Lead – Coding Club</h3>
+                  <p class="timeline-org"><i class="fas fa-code-branch"></i> XYZ University Tech Club</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date"><i class="far fa-calendar"></i> Sep 2022 – May 2024</span>
+                  <span class="timeline-type leadership">Leadership</span>
+                </div>
+              </div>
+              <ul class="timeline-contributions">
+                <li>Led a team of 20+ student developers organizing 10+ technical events</li>
+                <li>Conducted workshops on Python, web development, and DSA for 100+ students</li>
+                <li>Organized the annual hackathon "HackXYZ" with 300+ participants</li>
+                <li>Mentored 15+ junior members in their first coding projects</li>
+              </ul>
+              <div class="timeline-tech">
+                <span class="tech-tag">Leadership</span><span class="tech-tag">Event Management</span><span class="tech-tag">Mentoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section id="education" class="education section" aria-label="Educational background">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">The foundation of my technical knowledge</p>
+        </div>
+        <div class="education-grid">
+          <div class="edu-card featured" data-aos="fade-up">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-content">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-degree">B.Tech – Artificial Intelligence and Data Science</h3>
+                  <p class="edu-institution"><i class="fas fa-university"></i> PSRR College of Engineering, Sivakasi.</p>
+                </div>
+                <div class="edu-meta">
+                  <span class="edu-year"><i class="far fa-calendar"></i> 2023 – 2027</span>
+                  <span class="edu-cgpa">CGPA: 8.5 / 10</span>
+                </div>
+              </div>
+              <div class="edu-coursework">
+                <h4>Relevant Coursework</h4>
+                <div class="course-tags">
+                  <span class="course-tag">Data Structures & Algorithms</span>
+                  <span class="course-tag">Machine Learning</span>
+                  <span class="course-tag">Operating Systems</span>
+                  <span class="course-tag">Database Management</span>
+                  <span class="course-tag">Computer Networks</span>
+                  <span class="course-tag">Artificial Intelligence</span>
+                  <span class="course-tag">Cloud Computing</span>
+                  <span class="course-tag">Software Engineering</span>
+                  <span class="course-tag">Deep Learning</span>
+                  <span class="course-tag">Natural Language Processing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="edu-card" data-aos="fade-up">
+            <div class="edu-icon"><i class="fas fa-school"></i></div>
+            <div class="edu-content">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-degree">Higher Secondary (12th) – Computer Science</h3>
+                  <p class="edu-institution"><i class="fas fa-school"></i> VNUP Kaleeswari Higher Secondary School, Vanniampatti, Srivilliputhur.</p>
+                </div>
+                <div class="edu-meta">
+                  <span class="edu-year"><i class="far fa-calendar"></i> 2016 – 2023</span>
+                  <span class="edu-cgpa">Percentage: 79.17%</span>
+                </div>
+              </div>
+              <p class="edu-desc">Specialized in Physics, Chemistry, and Mathematics with Computer Science as an elective. I was fortunate to secure a good percentage in my school examinations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS SECTION ===== -->
+    <section id="certifications" class="certifications section" aria-label="Certifications">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Professional certifications and completed courses</p>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card" data-aos="fade-up">
+            <div class="cert-logo ibm"><i class="fas fa-server"></i></div>
+            <div class="cert-content">
+              <h3 class="cert-name">IBM Cognos Analytics</h3>
+              <p class="cert-issuer">Adroit Technologies / IBM</p>
+              <span class="cert-date"><i class="far fa-calendar-check"></i> April 2026</span>
+              <a href="https://drive.google.com/file/d/1jTTyWWl4I07yOn_fF3Vp8G9IlCNRTuQl/view?usp=share_link" target="_blank" rel="noopener noreferrer" class="cert-link">View Credential <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="cert-card" data-aos="fade-up">
+            <div class="cert-logo aws"><i class="fab fa-aws"></i></div>
+            <div class="cert-content">
+              <h3 class="cert-name">Data Science</h3>
+              <p class="cert-issuer">Persevex</p>
+              <span class="cert-date"><i class="far fa-calendar-check"></i> 16 Aug 2025</span>
+              <a href="https://drive.google.com/file/d/1RQ_TSMo4UWV5j6N5Nfctz9LtN7Yt3TTI/view?usp=drive_link  " target="_blank" rel="noopener noreferrer" class="cert-link">View Credential <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- <div class="cert-card" data-aos="fade-up">
+            <div class="cert-logo meta"><i class="fab fa-meta"></i></div>
+            <div class="cert-content">
+              <h3 class="cert-name">Meta Front-End Developer</h3>
+              <p class="cert-issuer">Meta / Coursera</p>
+              <span class="cert-date"><i class="far fa-calendar-check"></i> November 2023</span>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">View Credential <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div> -->
+          <div class="cert-card" data-aos="fade-up">
+            <div class="cert-logo deep"><i class="fas fa-brain"></i></div>
+            <div class="cert-content">
+              <h3 class="cert-name">Programming in Java</h3>
+              <p class="cert-issuer">Java / NPTEL</p>
+              <span class="cert-date"><i class="far fa-calendar-check"></i> Jan-Apr 2026</span>
+              <a href="https://drive.google.com/file/d/1tA7LRUi3iX88ljtpmwOSUWulRUJnU9Kb/view?usp=share_link" target="_blank" rel="noopener noreferrer" class="cert-link">View Credential <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="cert-card" data-aos="fade-up">
+            <div class="cert-logo ibm"><i class="fas fa-server"></i></div>
+            <div class="cert-content">
+              <h3 class="cert-name">IBM NM Final Hackathon</h3>
+              <p class="cert-issuer">IBM / Naan Mudhalvan</p>
+              <span class="cert-date"><i class="far fa-calendar-check"></i> February 2026</span>
+              <a href="https://drive.google.com/file/d/1pUfwkwmzO8-Z3IoCglKdrc5C09UNM9Q2/view?usp=share_link" target="_blank" rel="noopener noreferrer" class="cert-link">View Credential <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- <div class="cert-card" data-aos="fade-up">
+            <div class="cert-logo hackerrank"><i class="fab fa-hackerrank"></i></div>
+            <div class="cert-content">
+              <h3 class="cert-name">Python (Advanced)</h3>
+              <p class="cert-issuer">HackerRank</p>
+              <span class="cert-date"><i class="far fa-calendar-check"></i> May 2023</span>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">View Credential <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS SECTION =====
+    <section id="achievements" class="achievements section" aria-label="Awards and achievements">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Recognition</span>
+          <h2 class="section-title">My <span class="gradient-text">Achievements</span></h2>
+          <p class="section-subtitle">Milestones and recognitions earned along the journey</p>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card" data-aos="fade-up">
+            <div class="achievement-icon hackathon"><i class="fas fa-trophy"></i></div>
+            <h3>Smart India Hackathon</h3>
+            <p class="achievement-desc">Finalist – Top 50 teams nationally. Built an AI solution for rural healthcare diagnostics.</p>
+            <span class="achievement-date">2024</span>
+          </div>
+          <div class="achievement-card" data-aos="fade-up">
+            <div class="achievement-icon coding"><i class="fas fa-medal"></i></div>
+            <h3>LeetCode Top 10%</h3>
+            <p class="achievement-desc">Ranked in the global top 10% with 500+ problems solved across Easy, Medium, and Hard.</p>
+            <span class="achievement-date">2024</span>
+          </div>
+          <div class="achievement-card" data-aos="fade-up">
+            <div class="achievement-icon academic"><i class="fas fa-award"></i></div>
+            <h3>Academic Excellence Award</h3>
+            <p class="achievement-desc">Awarded best student of the semester for maintaining CGPA above 9.0 in 4th semester.</p>
+            <span class="achievement-date">2023</span>
+          </div>
+          <div class="achievement-card" data-aos="fade-up">
+            <div class="achievement-icon opensource"><i class="fab fa-github"></i></div>
+            <h3>Open Source Contributor</h3>
+            <p class="achievement-desc">Merged 15+ PRs to popular open-source repositories including TensorFlow and scikit-learn docs.</p>
+            <span class="achievement-date">2023 – Present</span>
+          </div>
+          <div class="achievement-card" data-aos="fade-up">
+            <div class="achievement-icon hackathon"><i class="fas fa-code"></i></div>
+            <h3>CodeChef 4-Star Coder</h3>
+            <p class="achievement-desc">Achieved 4-star rating (1800+) on CodeChef through consistent competitive programming.</p>
+            <span class="achievement-date">2023</span>
+          </div>
+          <div class="achievement-card" data-aos="fade-up">
+            <div class="achievement-icon academic"><i class="fas fa-newspaper"></i></div>
+            <h3>IEEE Paper Publication</h3>
+            <p class="achievement-desc">Co-authored research paper on NLP for Indian languages accepted at IEEE ICCCI 2024.</p>
+            <span class="achievement-date">2024</span>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ===== CODING PROFILES SECTION ===== -->
+    <section id="coding" class="coding section" aria-label="GitHub and coding profiles">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">My Presence</span>
+          <h2 class="section-title">GitHub & <span class="gradient-text">Coding Profiles</span></h2>
+          <p class="section-subtitle">Find me on these platforms where I practice and build</p>
+        </div>
+        <div class="coding-grid">
+          <div class="github-stats-card" data-aos="fade-up">
+            <div class="coding-card-header">
+              <i class="fab fa-github"></i>
+              <h3>GitHub</h3>
+            </div>
+            <p style="color:var(--text-muted);font-size:0.9375rem;line-height:1.7;margin-bottom:1.5rem;">
+              I share my academic projects, assignments, and personal experiments on GitHub.
+              Feel free to explore my repositories and see what I've been building.
+            </p>
+            <a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class="fab fa-github"></i> View GitHub Profile
+            </a>
+          </div>
+          <div class="coding-profiles-col">
+            <div class="coding-profile-card leetcode" data-aos="fade-up">
+              <div class="profile-icon"><i class="fas fa-code"></i></div>
+              <div class="profile-info">
+                <h3>LeetCode</h3>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem;">Practicing DSA problems regularly</p>
+              </div>
+              <a href="https://leetcode.com/u/PONKUMAR_P23/" target="_blank" rel="noopener noreferrer" class="profile-link" aria-label="LeetCode"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="coding-profile-card hackerrank" data-aos="fade-up">
+              <div class="profile-icon"><i class="fab fa-hackerrank"></i></div>
+              <div class="profile-info">
+                <h3>HackerRank</h3>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem;">Python & Problem Solving challenges</p>
+              </div>
+              <a href="https://www.hackerrank.com/profile/ponkumarp143" target="_blank" rel="noopener noreferrer" class="profile-link" aria-label="HackerRank"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="coding-profile-card codechef" data-aos="fade-up">
+              <div class="profile-icon"><i class="fas fa-utensils"></i></div>
+              <div class="profile-info">
+                <h3>CodeChef</h3>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem;">Competitive programming practice</p>
+              </div>
+              <a href="https://www.codechef.com/users/ponkumarp_23" target="_blank" rel="noopener noreferrer" class="profile-link" aria-label="CodeChef"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <!-- <div class="coding-profile-card codeforces" data-aos="fade-up">
+              <div class="profile-icon"><i class="fas fa-fire"></i></div>
+              <div class="profile-info">
+                <h3>Codeforces</h3>
+                <div class="profile-stats">
+                  <span><strong>Specialist</strong></span>
+                  <span><strong>1400+</strong> Rating</span>
+                  <span><strong>150+</strong> Solved</span>
+                </div>
+              </div>
+              <a href="https://codeforces.com" target="_blank" rel="noopener noreferrer" class="profile-link" aria-label="Codeforces"><i class="fas fa-external-link-alt"></i></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <!-- <section id="testimonials" class="testimonials section" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Kind Words</span>
+          <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+          <p class="section-subtitle">Feedback from mentors, professors, and collaborators</p>
+        </div>
+        <div class="testimonials-wrapper" data-aos="fade-up">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"An exceptionally talented student with a rare combination of strong theoretical foundation and practical implementation skills. Their work on NLP research showed maturity beyond their years."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar professor"><i class="fas fa-user-tie"></i></div>
+                <div class="author-info">
+                  <h4>Dr. Rajesh Kumar</h4>
+                  <p>Professor, Dept. of CSE – XYZ University</p>
+                  <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"One of the best interns we've had. They picked up our entire tech stack in the first week and delivered impactful features independently. We'd love to have them back full-time."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar manager"><i class="fas fa-user-circle"></i></div>
+                <div class="author-info">
+                  <h4>Priya Sharma</h4>
+                  <p>Engineering Manager – TechCorp Solutions</p>
+                  <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"A natural leader and collaborative team player. Their ability to break down complex problems and communicate solutions clearly made them an invaluable member of our hackathon team."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar mentor"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="author-info">
+                  <h4>Ankit Verma</h4>
+                  <p>Senior Software Engineer & Mentor</p>
+                  <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"Their freelance work for our business was exceptional. The website delivered on time, on budget, and exceeded expectations. Highly professional and technically skilled."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar client"><i class="fas fa-store"></i></div>
+                <div class="author-info">
+                  <h4>Meera Patel</h4>
+                  <p>Business Owner & Freelance Client</p>
+                  <div class="stars" aria-label="5 stars">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button class="testi-btn" id="prevTesti" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+            <div class="testi-dots" id="testiDots" role="tablist"></div>
+            <button class="testi-btn" id="nextTesti" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact section" aria-label="Contact">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">I'm always open to discussing opportunities and collaborations</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info-col" data-aos="fade-right">
+            <h3 class="contact-heading">Let's Start a Conversation</h3>
+            <p class="contact-desc">Whether you have a job opportunity, a project idea, or just want to connect — my inbox is always open. I'll try my best to get back to you within 24 hours.</p>
+            <div class="contact-details">
+              <a href="mailto:ponkumarp143@gmail.com" class="contact-detail-item">
+                <div class="contact-icon email-icon"><i class="fas fa-envelope"></i></div>
+                <div><span class="detail-label">Email</span><span class="detail-value">ponkumarp143@gmail.com</span></div>
+              </a>
+              <a href="tel:+919342189432" class="contact-detail-item">
+                <div class="contact-icon phone-icon"><i class="fas fa-phone"></i></div>
+                <div><span class="detail-label">Phone</span><span class="detail-value">+91-93421 89432</span></div>
+              </a>
+              <a href="https://www.linkedin.com/in/ponkumarp2302/" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
+                <div class="contact-icon linkedin-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div><span class="detail-label">LinkedIn</span><span class="detail-value">linkedin.com/in/ponkumarp2302/</span></div>
+              </a>
+              <a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
+                <div class="contact-icon github-icon"><i class="fab fa-github"></i></div>
+                <div><span class="detail-label">GitHub</span><span class="detail-value">github.com/PonkumarP</span></div>
+              </a>
+              <div class="contact-detail-item">
+                <div class="contact-icon location-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div><span class="detail-label">Location</span><span class="detail-value">Srivilliputhur, TamilNadu, India</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-col" data-aos="fade-left">
+            <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user input-icon"></i>
+                  <input type="text" id="name" name="from_name" class="form-input" placeholder="Rohit Sharma" required autocomplete="name" aria-required="true" />
+                </div>
+                <span class="form-error" id="nameError" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-envelope input-icon"></i>
+                  <input type="email" id="email" name="reply_to" class="form-input" placeholder="mumbaiindians@gmail.com" required autocomplete="email" aria-required="true" />
+                </div>
+                <span class="form-error" id="emailError" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-tag input-icon"></i>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="Content / title" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fas fa-comment input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Write your message here..." required aria-required="true"></textarea>
+                </div>
+                <span class="form-error" id="messageError" role="alert"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+              </button>
+              <div class="form-success" id="formSuccess" role="status" style="display:none;">
+                <i class="fab fa-whatsapp"></i> WhatsApp opened! Send the pre-filled message to reach me instantly.
+              </div>
+              <div class="form-error-msg" id="formErrorMsg" role="alert" style="display:none;">
+                <i class="fas fa-exclamation-circle"></i> Failed to send. Please try again or email me directly at <a href="mailto:ponkumarp143@gmail.com">ponkumarp143@gmail.com</a>.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">&lt;Ponkumar_P/&gt;</a>
+          <p class="footer-tagline">Building the future, one line of code at a time.</p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="https://www.linkedin.com/in/ponkumarp2302/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:ponkumarp143@gmail.com" class="footer-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://x.com/ungalil_oru_guy" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/_pkfinity8/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#experience">Experience</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>More</h4>
+            <ul>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <!-- <li><a href="#achievements">Achievements</a></li> -->
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="assets/Ponkumar_P_Software_Engineer_Resume.pdf" download>Download CV</a></li>
+              <li><a href="https://github.com/PonkumarP" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/ponkumarp2302/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://leetcode.com/u/PONKUMAR_P23/" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> Ponkumar P. Designed &amp; Built with <span class="heart" aria-label="love">♥</span> using HTML, CSS &amp; JavaScript.</p>
+        <p class="footer-tech">Open to opportunities worldwide</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
